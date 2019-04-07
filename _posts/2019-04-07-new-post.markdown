@@ -1,0 +1,4 @@
+---
+layout: base
+---
+I've been thinking about things less lately.

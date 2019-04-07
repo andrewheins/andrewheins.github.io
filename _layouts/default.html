@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+      <main>
+        <p>Andrew Heins lives in Canada and works with <a href="https://cantilever.co">Cantilever</a>.</p>
+
+        {{ content }}
+      </main>
+  </body>
+  <footer>
+    {% if site.posts[1].url %}
+      {% if page.url == "/" %}
+        <a href="{{ site.posts[1].url }}">Previous</a>
+      {% else %}
+        {% if page.previous.url %}
+          <a href="{{page.previous.url}}">Previous</a>
+        {% endif %}
+        {% if page.next.url == site.posts.first.url %}
+          <a href="/">Next</a>
+        {% else %}  
+          <a href="{{page.next.url}}">Next</a>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  </footer>
+</html>
