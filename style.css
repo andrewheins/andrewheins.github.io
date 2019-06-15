@@ -32,6 +32,10 @@ p + p {
   margin-top: 1rem;
 }
 
+ul li + li {
+  margin-top: 0.25rem;
+}
+
 a {
   color: var(--color-primary);
   text-decoration: none;
